@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using Microsoft.EntityFrameworkCore;
+using HotelManager.Models;
 
-namespace HotelManager.Models.HotelDB
+namespace HotelManager.Models
 {
     public class HotelDBContext : DbContext
     {
@@ -12,7 +13,9 @@ namespace HotelManager.Models.HotelDB
         {
 
         }
-
+        public HotelDBContext(DbContextOptions<HotelDBContext> options)
+    : base(options)
+        { }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer(@"Server=.;Database=HotelDB;Trusted_Connection=True;");

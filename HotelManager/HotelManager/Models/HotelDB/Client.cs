@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
-namespace HotelManager.Models.HotelDB
+namespace HotelManager.Models
 {
     public class Client
     {

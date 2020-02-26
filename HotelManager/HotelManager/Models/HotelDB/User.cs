@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
-namespace HotelManager.Models.HotelDB
+namespace HotelManager.Models
 {
     public class User
     {
@@ -26,7 +26,7 @@ namespace HotelManager.Models.HotelDB
 
         [Required]
         public string LastName { get; set; }
-        
+
         [Required]
         public string EGN { get; set; }
 
@@ -39,12 +39,11 @@ namespace HotelManager.Models.HotelDB
         [Required]
         public bool IsActive { get; set; }
 
-        public DateTime? FiredDate{ get; set; }
+        public DateTime? FiredDate { get; set; }
 
         [Required]
         public bool IsAdmin { get; set; }
 
         public List<Reservation> Reservations { get; set; }
-
     }
 }
